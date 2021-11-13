@@ -18,6 +18,7 @@ if [ ! command -v dislocker &> /dev/null ]
 then
 echo -e "${greenColour}"'Installing utilities...'"${endColour}"
 sudo apt install more-utils -y > /dev/null 2>&1
+echo -e ' ' 
 fi
 
 echo -e "${greenColour}"'1.- Enable password login.'"${endColour}"
