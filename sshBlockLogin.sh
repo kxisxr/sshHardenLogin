@@ -14,6 +14,12 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit
 fi
 
+if [ ! command -v dislocker &> /dev/null ]
+then
+echo -e "${greenColour}"'Installing utilities...'"${endColour}"
+sudo apt install more-utils -y > /dev/null 2>&1
+fi
+
 echo -e "${greenColour}"'1.- Enable password login.'"${endColour}"
 echo -e "${redColour}"'2.- Disable password login.\n'"${endColour}"
 
