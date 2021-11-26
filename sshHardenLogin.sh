@@ -24,7 +24,7 @@ fi
 echo -e "${greenColour}"'1.- Enable password login.'"${endColour}"
 echo -e "${redColour}"'2.- Disable password login.\n'"${endColour}"
 
-echo -e -n "${yellowColour}"'Selecciona una opcion: '"${endColour}"
+echo -e -n "${yellowColour}"'Select an option: '"${endColour}"
 read -e value
 
 if [ $value == '1' ]
