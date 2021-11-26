@@ -14,7 +14,7 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit
 fi
 
-if [ ! command -v dislocker &> /dev/null ]
+if [ ! command -v sponge &> /dev/null ]
 then
 echo -e "${greenColour}"'Installing utilities...'"${endColour}"
 sudo apt install more-utils -y > /dev/null 2>&1
