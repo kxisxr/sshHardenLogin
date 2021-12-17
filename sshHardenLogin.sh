@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 #Author: kxisxr
 greenColour="\x1B[0;32m\033[1m"
 endColour="\033[0m\x1B[0m"
@@ -14,13 +14,17 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit
 fi
 
-if [ ! command -v sponge &> /dev/null ]
+echo -e "${greenColour}"'Checking for sponge...'"${endColour}\n"
+
+if ! command -v sponge &> /dev/null
 then
 echo -e "${greenColour}"'Installing utilities...'"${endColour}"
-sudo apt install more-utils -y > /dev/null 2>&1
-echo -e ' ' 
+sudo apt install moreutils -y > /dev/null 2>&1
+echo -e ' '
 fi
 
+source ~/.bashrc
+sleep 1
 echo -e "${greenColour}"'1.- Enable password login.'"${endColour}"
 echo -e "${redColour}"'2.- Disable password login.\n'"${endColour}"
 
